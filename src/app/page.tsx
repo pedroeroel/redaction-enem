@@ -36,15 +36,15 @@ export default function Home() {
 
       resultContainer.innerHTML = `
         <h2 class="text-2xl font-semibold">Results:</h2>
-        <p class="text-lg">Your general score was: ${data.generalGrade}</p>
-        <p class="text-lg">Your essay was: ${data.comments[5]}</p>
+        <p class="text-lg">Your general score was <span className="text-2xl font-bold">${data.generalGrade}</span></p>
+        <p class="text-lg">General Comment: ${data.comments[5]}</p>
     
-        <ul class="list-disc pl-5">
-          <li class="text-lg">Competency 1: ${data.competencies[0]} - ${data.comments[0]}</li>
-          <li class="text-lg">Competency 2: ${data.competencies[1]} - ${data.comments[1]}</li>
-          <li class="text-lg">Competency 3: ${data.competencies[2]} - ${data.comments[2]}</li>
-          <li class="text-lg">Competency 4: ${data.competencies[3]} - ${data.comments[3]}</li>
-          <li class="text-lg">Competency 5: ${data.competencies[4]} - ${data.comments[4]}</li>
+        <ul class="list-disc pl-5 flex flex-col gap-2">
+          <li class="text-lg">Competency 1 - ${data.competencies[0]} - ${data.comments[0]}</li>
+          <li class="text-lg">Competency 2 - ${data.competencies[1]} - ${data.comments[1]}</li>
+          <li class="text-lg">Competency 3 - ${data.competencies[2]} - ${data.comments[2]}</li>
+          <li class="text-lg">Competency 4 - ${data.competencies[3]} - ${data.comments[3]}</li>
+          <li class="text-lg">Competency 5 - ${data.competencies[4]} - ${data.comments[4]}</li>
         </ul>
           `;
       return;
@@ -91,7 +91,7 @@ export default function Home() {
           </button>
         </form>
 
-        <section id='result'></section>
+        <section id='result' className="flex flex-col gap-2"></section>
 
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
