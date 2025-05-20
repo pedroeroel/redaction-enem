@@ -1,9 +1,4 @@
-'use client'
-import { useState } from 'react'
-
 export default function Home() {
-
-  const [result, setResult] = useState<string|null>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -32,8 +27,6 @@ export default function Home() {
       ),
     });
     const data = await response.json();
-    setResult(data);
-    console.log(data);
     if (data.error) {
       alert(data.error);
       return;
