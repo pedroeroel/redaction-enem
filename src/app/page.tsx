@@ -1,3 +1,4 @@
+"use client"
 export default function Home() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
